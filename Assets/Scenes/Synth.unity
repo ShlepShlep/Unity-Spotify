@@ -261,7 +261,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -329,6 +329,7 @@ GameObject:
   - component: {fileID: 1341074758}
   - component: {fileID: 1341074757}
   - component: {fileID: 1341074760}
+  - component: {fileID: 1341074761}
   m_Layer: 0
   m_Name: Synth
   m_TagString: Untagged
@@ -346,7 +347,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 49b3c503d7ad149cf98b51fe23399b5e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9bdfbf7c42ff1e14ead3860d3efddacf, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -473,6 +474,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ccc2376d023445139e0def33133b13e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1341074761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341074756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cb3620c45bd144db053f530fe7dc76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1407255759
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,6 +567,7 @@ GameObject:
   - component: {fileID: 1535702999}
   - component: {fileID: 1535702998}
   - component: {fileID: 1535702997}
+  - component: {fileID: 1535703002}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -573,10 +587,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b327706504df4f8693784091a4ffc3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 2
-  maxSize: 5
-  startColor: {r: 0, g: 1, b: 0.00427413, a: 1}
-  endColor: {r: 1, g: 0, b: 0.95441294, a: 1}
 --- !u!65 &1535702998
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -618,7 +628,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5449b99e8f40c424b98a917b62a94cbd, type: 2}
+  - {fileID: 2100000, guid: ea440388edc3d0540a598ac5563ad3cf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -663,6 +673,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1535703002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535702996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45756d771e972774cb5fa9454af65892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: 2
+  maxSize: 5
+  startColor: {r: 1, g: 0.495283, b: 0.6462477, a: 0}
+  endColor: {r: 0.4198113, g: 0.5301895, b: 1, a: 0}
 --- !u!1 &2147305512
 GameObject:
   m_ObjectHideFlags: 0
