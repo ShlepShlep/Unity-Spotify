@@ -19,11 +19,9 @@ public class Dancer : MonoBehaviour
     {
         transform.localScale = Vector3.one * (3f + Mathf.Pow(volume, power) * maxSize);
 
-        var mixedColor = Color.Lerp(startColor, endColor, volume * 7f);
+        var mixedColor = Color.Lerp(startColor, endColor, volume * 5f);
 
         GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", mixedColor);
-
-        print(volume);
 
         if (true)
         {
