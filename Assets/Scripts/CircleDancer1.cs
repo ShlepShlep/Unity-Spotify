@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CircleDancer : MonoBehaviour
+public class CircleDancer1 : MonoBehaviour
 {
     public int count = 10;
     public float radius = 5f;
@@ -17,11 +17,9 @@ public class CircleDancer : MonoBehaviour
             var angle = (i/count * Mathf.PI * 2f);
             var x = Mathf.Cos(angle);
             var y = Mathf.Sin(angle);
-            var pos = new Vector3(x, y, 0) * radius;
-            //var pos1 = new Vector3(x, y, 0) * (radius-5f);
+            var pos = new Vector3(x, y, 0) * (radius);
 
             var obj = Instantiate(prefab, pos, Quaternion.identity, transform);
-            //var obj1 = Instantiate(prefab, pos1, Quaternion.identity, transform);
             obj.transform.LookAt(transform);
         }
 
@@ -30,7 +28,7 @@ public class CircleDancer : MonoBehaviour
 
     void Dance(float volume)
     {
-        transform.Rotate(0, 0, Mathf.Pow(volume, sensitivity) * Time.deltaTime * rotateSpeed);
+        transform.Rotate(0, 0, Mathf.Pow(volume-2f, sensitivity) * Time.deltaTime * rotateSpeed);
         transform.localScale = Vector3.one * volume;
     }
 }
